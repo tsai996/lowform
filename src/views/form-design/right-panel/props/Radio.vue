@@ -13,7 +13,7 @@ const { activeData } = inject<{
     <el-select
       :model-value="activeData.value"
       @update:model-value="
-        (val) => {
+        (val: unknown) => {
           if (activeData) {
             if (val === undefined) {
               activeData.value = null
