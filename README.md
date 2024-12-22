@@ -18,7 +18,7 @@ https://demo.lowflow.vip/
 
 #### 项目源码
 
-|        | 后端源码                                           |
+|        | 表单设计器                                          |
 |--------|------------------------------------------------|
 | github | https://github.com/tsai996/lowform-design      |
 | 码云     | https://gitee.com/cai_xiao_feng/lowform-design |
