@@ -57,21 +57,13 @@ export default defineConfig({
         chunkFileNames: 'assets/js/[name]-[hash].js',
         entryFileNames: 'assets/js/[name]-[hash].js',
         assetFileNames: 'assets/[ext]/[name]-[hash].[ext]',
-        manualChunks: {
-          vue: ['vue'],
-          'element-plus-icons': ['@element-plus/icons-vue'],
-          'vue-router': ['vue-router'],
-          'element-plus': ['element-plus']
-        },
         sanitizeFileName(name) {
           const match = /^[a-z]:/i.exec(name)
           const driveLetter = match ? match[0] : ''
           return (
             driveLetter +
-            name
-              .substring(driveLetter.length)
-              // eslint-disable-next-line no-control-regex
-              .replace(/[\x00-\x1F\x7F<>*#"{}|^[\]`;?:&=+$,]/g, '')
+            // eslint-disable-next-line no-control-regex
+            name.substring(driveLetter.length).replace(/[\x00-\x1F\x7F<>*#"{}|^[\]`;?:&=+$,]/g, '')
           )
         }
       }
