@@ -10,14 +10,48 @@ import { cloneDeep } from 'lodash-es'
 import { useRefHistory } from '@vueuse/core'
 import { type FormField } from '@xfc/vue3-form-render'
 import RenderForm from '@/components/RenderForm/index.vue'
+import CodeDrawer from './CodeDrawer.vue'
 
-const props = defineProps<{
-  formConf: FormField
-}>()
-const formConf = useModel(props, 'formConf')
+const formConf = ref<FormField>({
+  id: 'formConf',
+  name: 'Form',
+  icon: 'ep:document',
+  type: 'container',
+  label: '表单',
+  value: undefined,
+  readonly: false,
+  required: undefined,
+  hidden: false,
+  props: {
+    scrollToError: true,
+    labelPosition: 'right',
+    labelWidth: 100,
+    size: 'default',
+    disabled: false
+  },
+  on: {
+    onVnodeMounted: '',
+    onVnodeUpdated: '',
+    onValidate: ''
+  },
+  children: []
+})
 const { undo, redo, canUndo, canRedo } = useRefHistory(formConf, { deep: true, clone: cloneDeep })
+const onUndo = () => {
+  undo()
+  nextTick(() => {
+    activeData.value = formConf.value
+  })
+}
+const onRedo = () => {
+  redo()
+  nextTick(() => {
+    activeData.value = formConf.value
+  })
+}
 const globalStore = useGlobalStore()
 const { isDark } = storeToRefs(globalStore)
+const codeDrawerRef = ref<InstanceType<typeof CodeDrawer>>()
 const renderFormRef = ref<InstanceType<typeof RenderForm>>()
 const previewConf = ref<FormField>(formConf.value)
 const previewForm = ref<Recordable>({})
@@ -59,6 +93,9 @@ const onImport = () => {
 const onExport = () => {
   const data = JSON.stringify(formConf.value, null, 2)
   FileSaver.saveAs(new Blob([data], { type: 'text/plain' }), `${formConf.value.id}.form`)
+}
+const onCode = () => {
+  codeDrawerRef.value?.open()
 }
 const onPreview = () => {
   previewConf.value = cloneDeep(formConf.value)
@@ -127,12 +164,12 @@ const toGitHub = () => {
           <el-space :size="0">
             <el-button-group size="small">
               <el-tooltip placement="top" content="撤销">
-                <el-button @click="undo" :disabled="!canUndo">
+                <el-button @click="onUndo" :disabled="!canUndo">
                   <iconify icon="ic:baseline-undo" />
                 </el-button>
               </el-tooltip>
               <el-tooltip placement="top" content="恢复">
-                <el-button @click="redo" :disabled="!canRedo">
+                <el-button @click="onRedo" :disabled="!canRedo">
                   <iconify icon="ic:baseline-redo" />
                 </el-button>
               </el-tooltip>
@@ -147,13 +184,31 @@ const toGitHub = () => {
           </el-segmented>
           <el-space :size="7">
             <el-button-group size="small">
-              <el-button @click="onImport">
-                <iconify icon="mingcute:file-import-line"></iconify>
-                导入
-              </el-button>
-              <el-button icon="Download" @click="onExport"> 导出</el-button>
-              <el-button icon="BrushFilled" @click="onClear"> 清空</el-button>
-              <el-button icon="View" @click="onPreview"> 预览</el-button>
+              <el-tooltip content="导入" placement="top">
+                <el-button @click="onImport">
+                  <iconify :size="3" icon="uil:import"></iconify>
+                </el-button>
+              </el-tooltip>
+              <el-tooltip content="导出" placement="top">
+                <el-button @click="onExport">
+                  <iconify :size="3" icon="uil:export"></iconify>
+                </el-button>
+              </el-tooltip>
+              <el-tooltip content="生成代码" placement="top">
+                <el-button @click="onCode">
+                  <iconify :size="3" icon="mdi:code"></iconify>
+                </el-button>
+              </el-tooltip>
+              <el-tooltip content="清空" placement="top">
+                <el-button @click="onClear">
+                  <iconify :size="3" icon="ep:brush"></iconify>
+                </el-button>
+              </el-tooltip>
+              <el-tooltip content="预览" placement="top">
+                <el-button @click="onPreview">
+                  <iconify :size="3" icon="ep:video-play"></iconify>
+                </el-button>
+              </el-tooltip>
             </el-button-group>
           </el-space>
         </el-header>
@@ -167,7 +222,8 @@ const toGitHub = () => {
         <RightPanel />
       </el-aside>
     </el-container>
-    <el-drawer v-model="drawerVisible" @close="onClose" title="表单预览" size="60%" direction="rtl">
+    <CodeDrawer ref="codeDrawerRef" :field="formConf" />
+    <el-drawer v-model="drawerVisible" @close="onClose" title="表单预览" size="95%" direction="btt">
       <RenderForm
         ref="renderFormRef"
         :key="previewKey"

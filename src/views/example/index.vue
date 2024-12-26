@@ -5,32 +5,8 @@ import { useCheckbox } from './hooks/useCheckbox'
 import { useRadio } from './hooks/useRadio'
 import { useSelect } from './hooks/useSelect'
 import { useUpload } from './hooks/useUpload'
-import { type FormField, renderElement } from '@xfc/vue3-form-render'
+import { renderElement } from '@xfc/vue3-form-render'
 
-const formConf = ref<FormField>({
-  id: 'formConf',
-  name: 'Form',
-  icon: 'ep:document',
-  type: 'container',
-  label: '表单',
-  value: undefined,
-  readonly: false,
-  required: undefined,
-  hidden: false,
-  props: {
-    scrollToError: true,
-    labelPosition: 'right',
-    labelWidth: 100,
-    size: 'default',
-    disabled: false
-  },
-  on: {
-    onMounted: '',
-    onUnmounted: '',
-    onValidate: ''
-  },
-  children: []
-})
 renderElement
   .addComponent('Form', ElForm)
   .addComponent('Input', ElInput)
@@ -59,7 +35,7 @@ renderElement
 </script>
 
 <template>
-  <FormDesign :form-conf="formConf"></FormDesign>
+  <FormDesign></FormDesign>
 </template>
 
 <style scoped lang="scss"></style>

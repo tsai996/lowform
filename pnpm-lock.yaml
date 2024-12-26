@@ -30,8 +30,8 @@ importers:
         specifier: ^1.0.5
         version: 1.0.5(typescript@5.4.5)
       '@xfc/vue3-form-render':
-        specifier: ^1.1.1
-        version: 1.1.1(typescript@5.4.5)
+        specifier: ^1.1.3
+        version: 1.1.3(typescript@5.4.5)
       codemirror:
         specifier: ^6.0.1
         version: 6.0.1
@@ -1238,11 +1238,11 @@ packages:
   '@xfc/vue3-draggable@1.0.5':
     resolution: {integrity: sha512-2dlFC7Qi2Jj49QvQB1KXOiRaQxF0yXdAsY0SIaD26+eD3MRPTIocBPzUFBi3ZAIlVKOqnB+K2/ahsNJehlhIeQ==}
 
-  '@xfc/vue3-form-render@1.1.1':
-    resolution: {integrity: sha512-ruqLrVA2k5UD06Q9QLuQT4uVGs4eOLVDZ3OCOl2Hf0N8/OqJqGwmMi7NWPSNL95FI+WwdCe0XKLztIfhtf3Mpw==}
+  '@xfc/vue3-form-render@1.1.3':
+    resolution: {integrity: sha512-dyGEDMm+rl6yPtZK7T2CPZTS9qKpSwpZ7w6fLTyTLsRmswyGwC638n26D+VBmUFDvMM6sbmhpSLonFscjxQIeg==}
 
-  '@xfc/vue3-json-render@1.0.3':
-    resolution: {integrity: sha512-x+kI3Hchoi2FqPRxex4xySmc+kik7uktpyNA/eLzUqGWM9SP2lhW2ie1t2/Kx/6EZ/LPIK3k+C+AKpmRCaHJZw==}
+  '@xfc/vue3-json-render@1.0.5':
+    resolution: {integrity: sha512-PagnKZrYhdWPdn7sd1e7O9xLxXeHZDCObUXovYnSZTdMN05/oKn80IcIXnb4rjfKyCXXZxK+hdyulSUyIXPPCw==}
 
   acorn-jsx@5.3.2:
     resolution: {integrity: sha512-rq9s+JNhf0IChjtDXxllJ7g41oZk5SlXtp0LHwyA5cejwn7vKmKp4pPri6YEePv2PU65sAsegbXtIinmDFDXgQ==}
@@ -3832,15 +3832,15 @@ snapshots:
     transitivePeerDependencies:
       - typescript
 
-  '@xfc/vue3-form-render@1.1.1(typescript@5.4.5)':
+  '@xfc/vue3-form-render@1.1.3(typescript@5.4.5)':
     dependencies:
-      '@xfc/vue3-json-render': 1.0.3(typescript@5.4.5)
+      '@xfc/vue3-json-render': 1.0.5(typescript@5.4.5)
       lodash-es: 4.17.21
       vue: 3.5.13(typescript@5.4.5)
     transitivePeerDependencies:
       - typescript
 
-  '@xfc/vue3-json-render@1.0.3(typescript@5.4.5)':
+  '@xfc/vue3-json-render@1.0.5(typescript@5.4.5)':
     dependencies:
       lodash-es: 4.17.21
       vue: 3.5.13(typescript@5.4.5)

@@ -43,7 +43,7 @@ defineExpose({
     draggable
     width="55%"
   >
-    <el-alert :closable="false">function(event ,$inject ,field) {</el-alert>
+    <el-alert :closable="false">function(event ,$inject ,ref ,field) {</el-alert>
     <CodemirrorEditor v-model="eventCode" height="350px" :extensions="[javascriptLanguage]" />
     <el-alert :closable="false">}</el-alert>
     <template #footer>
