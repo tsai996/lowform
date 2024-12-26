@@ -20,7 +20,9 @@ const addEvent = (eventName: string) => {
       <el-text>
         {{ item }}
       </el-text>
-      <el-button type="primary" plain round @click="addEvent(item)"> 编写代码 </el-button>
+      <el-badge :isDot="!!(activeData?.on || {})[item]">
+        <el-button type="primary" plain round @click="addEvent(item)"> 编写代码 </el-button>
+      </el-badge>
     </div>
   </div>
 </template>
