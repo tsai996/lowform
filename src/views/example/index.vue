@@ -5,7 +5,9 @@ import { useCheckbox } from './hooks/useCheckbox'
 import { useRadio } from './hooks/useRadio'
 import { useSelect } from './hooks/useSelect'
 import { useUpload } from './hooks/useUpload'
+import { useButton } from './hooks/useButton'
 import { renderElement } from '@xfc/vue3-form-render'
+import { ElAlert, ElButton } from 'element-plus'
 
 renderElement
   .addComponent('Form', ElForm)
@@ -32,6 +34,8 @@ renderElement
   .addComponent('Card', ElCard)
   .addComponent('Color', ElColorPicker)
   .addComponent('Transfer', ElTransfer, useTransfer)
+  .addComponent('Button', ElButton, useButton)
+  .addComponent('Alert', ElAlert)
 </script>
 
 <template>

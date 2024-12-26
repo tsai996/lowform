@@ -566,5 +566,53 @@ export const containers: FormField[] = [
       onVnodeUpdated: ''
     },
     children: []
+  },
+  {
+    id: 'field20',
+    name: 'Button',
+    icon: 'mdi:button-pointer',
+    type: 'container',
+    label: '按钮',
+    value: null,
+    readonly: false,
+    hidden: false,
+    props: {
+      type: '',
+      plain: false,
+      text: false,
+      link: false,
+      round: false,
+      circle: false,
+      disabled: false
+    },
+    on: {
+      onVnodeMounted: '',
+      onVnodeUpdated: '',
+      onClick: ''
+    }
+  },
+  {
+    id: 'field21',
+    name: 'Alert',
+    icon: 'mdi:alert-outline',
+    type: 'container',
+    label: '提示',
+    value: null,
+    readonly: false,
+    hidden: false,
+    props: {
+      type: 'info',
+      title: '提示',
+      description: '描述',
+      effect: 'light',
+      showIcon: true,
+      closable: false,
+      center: false
+    },
+    on: {
+      onVnodeMounted: '',
+      onVnodeUpdated: '',
+      onClose: ''
+    }
   }
 ]
