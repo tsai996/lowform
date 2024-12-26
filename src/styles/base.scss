@@ -11,3 +11,17 @@ a,
     background-color: hsla(160, 100%, 37%, 0.2);
   }
 }
+
+.el-drawer {
+  .el-drawer__header {
+    margin-bottom: 0;
+    padding: calc(var(--el-drawer-padding-primary) - 5px) var(--el-drawer-padding-primary)
+    calc(var(--el-drawer-padding-primary) - 6px);
+    border-bottom: 1px var(--el-border-style) var(--el-border-color);
+  }
+
+  .el-drawer__footer {
+    border-top: var(--el-border);
+    padding: calc(var(--el-drawer-padding-primary) - 5px);
+  }
+}
