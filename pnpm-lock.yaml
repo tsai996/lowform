@@ -30,8 +30,8 @@ importers:
         specifier: ^1.0.5
         version: 1.0.5(typescript@5.4.5)
       '@xfc/vue3-form-render':
-        specifier: ^1.1.3
-        version: 1.1.3(typescript@5.4.5)
+        specifier: ^1.1.4
+        version: 1.1.4(typescript@5.4.5)
       codemirror:
         specifier: ^6.0.1
         version: 6.0.1
@@ -1238,8 +1238,8 @@ packages:
   '@xfc/vue3-draggable@1.0.5':
     resolution: {integrity: sha512-2dlFC7Qi2Jj49QvQB1KXOiRaQxF0yXdAsY0SIaD26+eD3MRPTIocBPzUFBi3ZAIlVKOqnB+K2/ahsNJehlhIeQ==}
 
-  '@xfc/vue3-form-render@1.1.3':
-    resolution: {integrity: sha512-dyGEDMm+rl6yPtZK7T2CPZTS9qKpSwpZ7w6fLTyTLsRmswyGwC638n26D+VBmUFDvMM6sbmhpSLonFscjxQIeg==}
+  '@xfc/vue3-form-render@1.1.4':
+    resolution: {integrity: sha512-XmI6GhEgKrnwCwYuEWfHuMl8RhOCzkjE/qmlxEcWCZYGxoHqiuHYuPQC8GDMwhdEU2Yt0JShg2Vnf+a+j38W2w==}
 
   '@xfc/vue3-json-render@1.0.5':
     resolution: {integrity: sha512-PagnKZrYhdWPdn7sd1e7O9xLxXeHZDCObUXovYnSZTdMN05/oKn80IcIXnb4rjfKyCXXZxK+hdyulSUyIXPPCw==}
@@ -3832,7 +3832,7 @@ snapshots:
     transitivePeerDependencies:
       - typescript
 
-  '@xfc/vue3-form-render@1.1.3(typescript@5.4.5)':
+  '@xfc/vue3-form-render@1.1.4(typescript@5.4.5)':
     dependencies:
       '@xfc/vue3-json-render': 1.0.5(typescript@5.4.5)
       lodash-es: 4.17.21
