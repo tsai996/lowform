@@ -104,8 +104,8 @@ export const formItems: FormField[] = [
       placeholder: '请选择下拉框',
       dataType: 'static',
       options: [
-        { label: '选项1', value: 1, type: 'number', disabled: false },
-        { label: '选项2', value: 2, type: 'number', disabled: false }
+        { label: '选项1', value: 1, disabled: false },
+        { label: '选项2', value: 2, disabled: false }
       ],
       dataSource: undefined
     },
@@ -133,8 +133,8 @@ export const formItems: FormField[] = [
     props: {
       dataType: 'static',
       options: [
-        { label: '选项1', value: 1, type: 'number', disabled: false },
-        { label: '选项2', value: 2, type: 'number', disabled: false }
+        { label: '选项1', value: 1, disabled: false },
+        { label: '选项2', value: 2, disabled: false }
       ],
       dataSource: undefined
     },
@@ -159,8 +159,8 @@ export const formItems: FormField[] = [
       max: 999,
       dataType: 'static',
       options: [
-        { label: '选项1', value: 1, type: 'number', disabled: false },
-        { label: '选项2', value: 2, type: 'number', disabled: false }
+        { label: '选项1', value: 1, disabled: false },
+        { label: '选项2', value: 2, disabled: false }
       ],
       dataSource: undefined
     },
@@ -413,8 +413,8 @@ export const formItems: FormField[] = [
       buttonTexts: [],
       dataType: 'static',
       options: [
-        { label: '选项1', value: 1, type: 'number', disabled: false },
-        { label: '选项2', value: 2, type: 'number', disabled: false }
+        { label: '选项1', value: 1, disabled: false },
+        { label: '选项2', value: 2, disabled: false }
       ],
       dataSource: undefined
     },
