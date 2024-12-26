@@ -577,7 +577,7 @@ export const containers: FormField[] = [
     readonly: false,
     hidden: false,
     props: {
-      type: '',
+      type: 'default',
       plain: false,
       text: false,
       link: false,

@@ -10,6 +10,7 @@ const { activeData } = inject<{
 <template>
   <el-form-item prop="type" label="主题" v-if="activeData?.props.type !== undefined">
     <el-select v-model="activeData.props.type" placeholder="请选择类型">
+      <el-option label="默认（default）" value="default"></el-option>
       <el-option label="重要（primary）" value="primary"></el-option>
       <el-option label="成功（success）" value="success"></el-option>
       <el-option label="警告（warning）" value="warning"></el-option>
