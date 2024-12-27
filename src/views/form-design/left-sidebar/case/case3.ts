@@ -85,7 +85,7 @@ const case3: FormField = {
                 onVnodeMounted: '',
                 onVnodeUpdated: '',
                 onChange:
-                  "const {getFiled} = $inject\nconst yc = getFiled('field_u00td')\nconst hc = getFiled('field_tj7q1')\nconst gd = getFiled('field_fhr5k')\nconst value = event[0]\nif(value == 1){\n  yc.hidden = false\n  hc.hidden = true\n  gd.hidden = true\n}else if(value == 2){\n  yc.hidden = false\n  hc.hidden = false\n  gd.hidden = false\n}else if(value == 3){\n  yc.hidden = true\n  hc.hidden = true\n  gd.hidden = true\n}"
+                  "const {getField} = $inject\nconst yc = getField('field_u00td')\nconst hc = getField('field_tj7q1')\nconst gd = getField('field_fhr5k')\nconst value = event[0]\nif(value == 1){\n  yc.hidden = false\n  hc.hidden = true\n  gd.hidden = true\n}else if(value == 2){\n  yc.hidden = false\n  hc.hidden = false\n  gd.hidden = false\n}else if(value == 3){\n  yc.hidden = true\n  hc.hidden = true\n  gd.hidden = true\n}"
               }
             }
           ]

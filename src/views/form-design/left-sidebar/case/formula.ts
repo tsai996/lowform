@@ -60,7 +60,7 @@ const formula: FormField = {
         onVnodeMounted: '',
         onVnodeUpdated: '',
         onChange:
-          "const {getFiled} = $inject\nconst yy = getFiled('field_h75fl')\nconst value = event[0]\nif(value == 2){\n  yy.required = true\n}else{\n  yy.required = false\n}"
+          "const {getField} = $inject\nconst yy = getField('field_h75fl')\nconst value = event[0]\nif(value == 2){\n  yy.required = true\n}else{\n  yy.required = false\n}"
       }
     },
     {
@@ -85,7 +85,7 @@ const formula: FormField = {
         onVnodeMounted: '',
         onVnodeUpdated: '',
         onChange:
-          'const {getFiled,formData} = $inject\nconst value = event[0]\nconst timestamp = new Date(value[1]).getTime() - new Date(value[0]).getTime()\nformData.field_ykkfx = timestamp /1000/60/60/24',
+          'const {getField,formData} = $inject\nconst value = event[0]\nconst timestamp = new Date(value[1]).getTime() - new Date(value[0]).getTime()\nformData.field_ykkfx = timestamp /1000/60/60/24',
         onBlur: '',
         onFocus: '',
         onClear: '',
