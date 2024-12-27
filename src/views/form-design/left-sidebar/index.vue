@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import type { Component } from 'vue'
+import CasePanel from './CasePanel.vue'
 import AssemblyPanel from './AssemblyPanel.vue'
 import OutlinePanel from './OutlinePanel.vue'
 import SourcePanel from './SourcePanel.vue'
@@ -24,6 +25,13 @@ interface Options {
 }
 
 const sidebarOptions = ref<Options[]>([
+  {
+    label: '案例',
+    name: 'case',
+    icon: 'gg:menu-grid-r',
+    width: '250px',
+    component: markRaw(CasePanel)
+  },
   {
     label: '组件库',
     name: 'assembly',
