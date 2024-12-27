@@ -54,7 +54,7 @@ const sidebarOptions = ref<Options[]>([
     component: markRaw(SourcePanel)
   }
 ])
-const activeSidebar = ref<Options>(sidebarOptions.value[0])
+const activeSidebar = ref<Options>(sidebarOptions.value[1])
 const itemSize = computed(() => `${props.size}px`)
 const positionX = computed(() => {
   const index = sidebarOptions.value.findIndex((item) => item.name === activeSidebar.value?.name)
