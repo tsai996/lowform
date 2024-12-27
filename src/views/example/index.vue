@@ -6,8 +6,8 @@ import { useRadio } from './hooks/useRadio'
 import { useSelect } from './hooks/useSelect'
 import { useUpload } from './hooks/useUpload'
 import { useButton } from './hooks/useButton'
+import { useDivider } from './hooks/useDivider'
 import { renderElement } from '@xfc/vue3-form-render'
-import { ElAlert, ElButton } from 'element-plus'
 
 renderElement
   .addComponent('Form', ElForm)
@@ -36,6 +36,7 @@ renderElement
   .addComponent('Transfer', ElTransfer, useTransfer)
   .addComponent('Button', ElButton, useButton)
   .addComponent('Alert', ElAlert)
+  .addComponent('Divider', ElDivider, useDivider)
 </script>
 
 <template>

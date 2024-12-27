@@ -98,6 +98,9 @@
     "DirectiveBinding": true,
     "MaybeRef": true,
     "MaybeRefOrGetter": true,
-    "ElFormItem": true
+    "ElFormItem": true,
+    "ElAlert": true,
+    "ElButton": true,
+    "ElDivider": true
   }
 }

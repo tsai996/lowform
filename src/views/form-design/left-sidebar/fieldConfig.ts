@@ -436,8 +436,6 @@ export const containers: FormField[] = [
     type: 'container',
     label: '标签页',
     value: '1',
-    readonly: false,
-    required: true,
     hidden: false,
     props: {
       stretch: false,
@@ -474,8 +472,6 @@ export const containers: FormField[] = [
     type: 'container',
     label: '折叠面板',
     value: '1',
-    readonly: false,
-    required: true,
     hidden: false,
     props: {},
     on: {
@@ -507,8 +503,6 @@ export const containers: FormField[] = [
     type: 'container',
     label: '分栏布局',
     value: null,
-    readonly: false,
-    required: true,
     hidden: false,
     props: {
       justify: 'start',
@@ -554,8 +548,6 @@ export const containers: FormField[] = [
     type: 'container',
     label: '卡片',
     value: null,
-    readonly: false,
-    required: true,
     hidden: false,
     props: {
       shadow: 'always',
@@ -598,7 +590,6 @@ export const containers: FormField[] = [
     type: 'container',
     label: '提示',
     value: null,
-    readonly: false,
     hidden: false,
     props: {
       type: 'info',
@@ -613,6 +604,23 @@ export const containers: FormField[] = [
       onVnodeMounted: '',
       onVnodeUpdated: '',
       onClose: ''
+    }
+  },
+  {
+    id: 'field22',
+    name: 'Divider',
+    icon: 'mdi:horizontal-line',
+    type: 'container',
+    label: '分割线',
+    value: null,
+    hidden: false,
+    props: {
+      contentPosition: 'center',
+      content: '分割线'
+    },
+    on: {
+      onVnodeMounted: '',
+      onVnodeUpdated: ''
     }
   }
 ]
