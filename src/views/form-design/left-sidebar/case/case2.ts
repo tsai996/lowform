@@ -94,16 +94,19 @@ const case2: FormField = {
           {
             label: '杭州分公司',
             value: 1,
+            type: 'number',
             disabled: false
           },
           {
             label: '宁波分公司',
             value: 2,
+            type: 'number',
             disabled: false
           },
           {
             label: '金华分公司',
-            value: '3',
+            value: 3,
+            type: 'number',
             disabled: false
           }
         ]
@@ -138,21 +141,25 @@ const case2: FormField = {
           {
             label: '张三',
             value: 1,
+            type: 'number',
             disabled: false
           },
           {
             label: '李四',
             value: 2,
+            type: 'number',
             disabled: false
           },
           {
             label: '王五',
-            value: '3',
+            value: 3,
+            type: 'number',
             disabled: false
           },
           {
             label: '毛六',
-            value: '4',
+            value: 4,
+            type: 'number',
             disabled: false
           }
         ]

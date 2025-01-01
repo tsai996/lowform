@@ -1,5 +1,6 @@
 <script setup lang="ts">
-import { type FormField, FormRender } from '@xfc/vue3-form-render'
+import { type FormField } from '@xfc/vue3-form-render'
+import { FormRender } from './context'
 import type { FormInstance, FormItemRule } from 'element-plus'
 
 const props = defineProps<{
@@ -69,16 +70,20 @@ defineExpose({
 
 <template>
   <FormRender ref="formRef" :model="formData" :formData="formData" :field="field" v-bind="$attrs">
-    <template #formItem="{ render, field }">
+    <template #formItem="{ node, field }">
       <el-form-item
         v-if="!field.hidden"
         :prop="field.id"
-        :label="field.label"
+        :label="field.hideLabel ? undefined : field.label"
+        :label-width="field.hideLabel ? '0px' : undefined"
         :required="field.required"
         :rules="buildRule(field)"
       >
-        <component :is="render"></component>
+        <component :is="node"></component>
       </el-form-item>
+    </template>
+    <template v-for="(value, name) in $slots" #[name]="scope">
+      <slot :name="name" v-bind="scope || {}"></slot>
     </template>
   </FormRender>
 </template>

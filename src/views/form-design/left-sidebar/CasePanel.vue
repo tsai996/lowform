@@ -70,9 +70,7 @@ const load = (data: FormField) => {
   if (data) {
     delete props.formConf.children
     Object.assign(props.formConf, data)
-    nextTick(() => {
-      activeData.value = props.formConf
-    })
+    activeData.value = props.formConf
   }
 }
 </script>

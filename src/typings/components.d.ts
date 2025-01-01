@@ -43,7 +43,8 @@ declare module 'vue' {
     ElText: typeof import('element-plus/es')['ElText']
     ElTooltip: typeof import('element-plus/es')['ElTooltip']
     ElTree: typeof import('element-plus/es')['ElTree']
-    RenderForm: typeof import('./../components/RenderForm/index.vue')['default']
+    FormParser: typeof import('./../components/FormParser/index.vue')['default']
+    RenderForm: typeof import('@/components/FormParser/index.vue')['default']
     RouterLink: typeof import('vue-router')['RouterLink']
     RouterView: typeof import('vue-router')['RouterView']
   }

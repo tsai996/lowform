@@ -9,7 +9,7 @@ import FileSaver from 'file-saver'
 import { cloneDeep } from 'lodash-es'
 import { useRefHistory } from '@vueuse/core'
 import { type FormField } from '@xfc/vue3-form-render'
-import RenderForm from '@/components/RenderForm/index.vue'
+import FormParser from '@/components/FormParser/index.vue'
 import CodeDrawer from './CodeDrawer.vue'
 
 const formConf = ref<FormField>({
@@ -52,7 +52,7 @@ const onRedo = () => {
 const globalStore = useGlobalStore()
 const { isDark } = storeToRefs(globalStore)
 const codeDrawerRef = ref<InstanceType<typeof CodeDrawer>>()
-const renderFormRef = ref<InstanceType<typeof RenderForm>>()
+const rormParserRef = ref<InstanceType<typeof FormParser>>()
 const previewConf = ref<FormField>(formConf.value)
 const previewForm = ref<Recordable>({})
 const previewKey = ref(0)
@@ -104,12 +104,12 @@ const onPreview = () => {
   drawerVisible.value = true
 }
 const submitForm = () => {
-  renderFormRef.value?.submitForm().then((formData) => {
+  rormParserRef.value?.submitForm().then((formData) => {
     ElMessage.info(JSON.stringify(formData, null, 0))
   })
 }
 const resetForm = () => {
-  renderFormRef.value?.resetForm()
+  rormParserRef.value?.resetForm()
 }
 const onClose = () => {
   previewForm.value = {}
@@ -224,13 +224,13 @@ const toGitHub = () => {
     </el-container>
     <CodeDrawer ref="codeDrawerRef" :field="formConf" />
     <el-drawer v-model="drawerVisible" @close="onClose" title="表单预览" size="95%" direction="btt">
-      <RenderForm
-        ref="renderFormRef"
+      <FormParser
+        ref="rormParserRef"
         :key="previewKey"
         :formData="previewForm"
         :field="previewConf"
       >
-      </RenderForm>
+      </FormParser>
       <template #footer>
         <el-button type="primary" @click="submitForm">提交</el-button>
         <el-button type="info" @click="resetForm">重置</el-button>

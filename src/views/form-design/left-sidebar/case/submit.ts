@@ -64,11 +64,13 @@ const submit: FormField = {
           {
             label: '启用',
             value: 1,
+            type: 'number',
             disabled: false
           },
           {
             label: '禁用',
             value: 2,
+            type: 'number',
             disabled: false
           }
         ]

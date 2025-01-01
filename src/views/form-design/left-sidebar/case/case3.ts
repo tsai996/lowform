@@ -67,16 +67,19 @@ const case3: FormField = {
                   {
                     label: '目录',
                     value: 1,
+                    type: 'number',
                     disabled: false
                   },
                   {
                     label: '菜单',
                     value: 2,
+                    type: 'number',
                     disabled: false
                   },
                   {
                     label: '按钮',
-                    value: '3',
+                    value: 3,
+                    type: 'number',
                     disabled: false
                   }
                 ]
@@ -378,21 +381,25 @@ const case3: FormField = {
                   {
                     label: '菜单1',
                     value: 1,
+                    type: 'number',
                     disabled: false
                   },
                   {
                     label: '菜单2',
                     value: 2,
+                    type: 'number',
                     disabled: false
                   },
                   {
                     label: '菜单3',
-                    value: '3',
+                    value: 3,
+                    type: 'number',
                     disabled: false
                   },
                   {
                     label: '菜单4',
-                    value: '4',
+                    value: 4,
+                    type: 'number',
                     disabled: false
                   }
                 ]

@@ -51,7 +51,20 @@ const changeReadonly = (val: boolean) => {
             v-model="activeData.label"
             placeholder="请输入标签"
             @update:model-value="onUpdateLabel"
-          />
+          >
+            <template #suffix>
+              <el-tooltip content="显示/隐藏标签" placement="top">
+                <el-icon
+                  v-if="activeData.hideLabel !== undefined"
+                  @click.stop="activeData.hideLabel = !activeData.hideLabel"
+                  class="el-input__icon el-input__password"
+                >
+                  <Hide v-if="activeData.hideLabel" />
+                  <View v-else />
+                </el-icon>
+              </el-tooltip>
+            </template>
+          </el-input>
         </el-form-item>
         <el-form-item prop="placeholder" label="操作">
           <el-checkbox

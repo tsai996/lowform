@@ -255,16 +255,19 @@ const case1: FormField = {
                   {
                     label: '男',
                     value: 1,
+                    type: 'number',
                     disabled: false
                   },
                   {
                     label: '女',
                     value: 2,
+                    type: 'number',
                     disabled: false
                   },
                   {
                     label: '未知',
-                    value: '3',
+                    value: 3,
+                    type: 'number',
                     disabled: false
                   }
                 ]
@@ -315,21 +318,25 @@ const case1: FormField = {
                   {
                     label: '销售部',
                     value: 1,
+                    type: 'number',
                     disabled: false
                   },
                   {
                     label: '市场部',
                     value: 2,
+                    type: 'number',
                     disabled: false
                   },
                   {
                     label: '开发部',
-                    value: '3',
+                    value: 3,
+                    type: 'number',
                     disabled: false
                   },
                   {
                     label: '财务部',
-                    value: '4',
+                    value: 4,
+                    type: 'number',
                     disabled: false
                   }
                 ]
@@ -380,16 +387,19 @@ const case1: FormField = {
                   {
                     label: '游客',
                     value: 1,
+                    type: 'number',
                     disabled: false
                   },
                   {
                     label: '系统管理员',
                     value: 2,
+                    type: 'number',
                     disabled: false
                   },
                   {
                     label: '管理员',
-                    value: '3',
+                    value: 3,
+                    type: 'number',
                     disabled: false
                   }
                 ]
@@ -437,11 +447,13 @@ const case1: FormField = {
                   {
                     label: '启用',
                     value: 1,
+                    type: 'number',
                     disabled: false
                   },
                   {
                     label: '禁用',
                     value: 2,
+                    type: 'number',
                     disabled: false
                   }
                 ]

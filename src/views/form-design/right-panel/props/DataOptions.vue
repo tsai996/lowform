@@ -21,7 +21,8 @@ const addOption = () => {
     const index = activeData.value.props.options.length + 1
     activeData.value.props.options.push({
       label: `选择${index}`,
-      value: `${index}`,
+      type: 'number',
+      value: index,
       disabled: false
     })
   }

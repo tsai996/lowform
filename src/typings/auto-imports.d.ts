@@ -18,7 +18,6 @@ declare global {
   const ElDatePicker: (typeof import('element-plus/es'))['ElDatePicker']
   const ElDivider: (typeof import('element-plus/es'))['ElDivider']
   const ElForm: (typeof import('element-plus/es'))['ElForm']
-  const ElFormItem: (typeof import('element-plus/es'))['ElFormItem']
   const ElInput: (typeof import('element-plus/es'))['ElInput']
   const ElInputNumber: (typeof import('element-plus/es'))['ElInputNumber']
   const ElMessage: (typeof import('element-plus/es'))['ElMessage']

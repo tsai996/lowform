@@ -12,8 +12,8 @@ const codeTemplate = ref(``)
 const extensions = ref([typescriptLanguage])
 const open = () => {
   codeTemplate.value = `<template>
-  <RenderForm
-    ref="renderFormRef"
+  <FormParser
+    ref="formParserRef"
     :formData="formData"
     :field="field"
   >
@@ -23,25 +23,25 @@ const open = () => {
         <el-button type="info" @click="resetForm">重置</el-button>
       </el-form-item>
     </template>
-  </RenderForm>
+  </FormParser>
 
 </template>
 <script setup>
   import { ref } from 'vue'
   import  { type FormField } from '@xfc/vue3-form-render'
-  import RenderForm from '@/components/RenderForm/index.vue'
+  import FormParser from '@/components/FormParser/index.vue'
 
-  const renderFormRef = ref<InstanceType<typeof RenderForm>>()
+  const formParserRef = ref<InstanceType<typeof FormParser>>()
   const field = ref<FormField>(${JSON.stringify(props.field)})
   // 提交
   const submitForm = () => {
-    renderFormRef.value?.submitForm().then((formData) => {
+    formParserRef.value?.submitForm().then((formData) => {
       console.log(formData)
     })
   }
   // 重置
   const resetForm = () => {
-    renderFormRef.value?.resetForm()
+    formParserRef.value?.resetForm()
   }
 <${'/'}script>
 <style scoped lang="scss">

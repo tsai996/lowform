@@ -12,6 +12,7 @@ export const formItems: FormField[] = [
     readonly: false,
     required: true,
     hidden: false,
+    hideLabel: false,
     rules: [],
     props: {
       maxlength: null,
@@ -39,6 +40,7 @@ export const formItems: FormField[] = [
     readonly: false,
     required: true,
     hidden: false,
+    hideLabel: false,
     rules: [],
     props: {
       type: 'textarea',
@@ -70,6 +72,7 @@ export const formItems: FormField[] = [
     readonly: false,
     required: true,
     hidden: false,
+    hideLabel: false,
     props: {
       min: undefined,
       max: undefined,
@@ -98,14 +101,15 @@ export const formItems: FormField[] = [
     readonly: false,
     required: true,
     hidden: false,
+    hideLabel: false,
     props: {
       filterable: true,
       multiple: false,
       placeholder: '请选择下拉框',
       dataType: 'static',
       options: [
-        { label: '选项1', value: 1, disabled: false },
-        { label: '选项2', value: 2, disabled: false }
+        { label: '选项1', value: 1, type: 'number', disabled: false },
+        { label: '选项2', value: 2, type: 'number', disabled: false }
       ],
       dataSource: undefined
     },
@@ -130,11 +134,12 @@ export const formItems: FormField[] = [
     readonly: false,
     required: true,
     hidden: false,
+    hideLabel: false,
     props: {
       dataType: 'static',
       options: [
-        { label: '选项1', value: 1, disabled: false },
-        { label: '选项2', value: 2, disabled: false }
+        { label: '选项1', value: 1, type: 'number', disabled: false },
+        { label: '选项2', value: 2, type: 'number', disabled: false }
       ],
       dataSource: undefined
     },
@@ -154,13 +159,14 @@ export const formItems: FormField[] = [
     readonly: false,
     required: true,
     hidden: false,
+    hideLabel: false,
     props: {
       direction: 'horizontal',
       max: 999,
       dataType: 'static',
       options: [
-        { label: '选项1', value: 1, disabled: false },
-        { label: '选项2', value: 2, disabled: false }
+        { label: '选项1', value: 1, type: 'number', disabled: false },
+        { label: '选项2', value: 2, type: 'number', disabled: false }
       ],
       dataSource: undefined
     },
@@ -180,6 +186,7 @@ export const formItems: FormField[] = [
     readonly: false,
     required: true,
     hidden: false,
+    hideLabel: false,
     props: {
       activeValue: true,
       inactiveValue: false,
@@ -202,6 +209,7 @@ export const formItems: FormField[] = [
     readonly: false,
     required: true,
     hidden: false,
+    hideLabel: false,
     props: {
       type: 'date',
       placeholder: '请选择日期选择',
@@ -233,6 +241,7 @@ export const formItems: FormField[] = [
     readonly: false,
     required: true,
     hidden: false,
+    hideLabel: false,
     props: {
       type: 'daterange',
       startPlaceholder: '开始日期',
@@ -262,6 +271,7 @@ export const formItems: FormField[] = [
     readonly: false,
     required: true,
     hidden: false,
+    hideLabel: false,
     props: {
       format: 'HH:mm:ss',
       valueFormat: 'HH:mm:ss',
@@ -290,6 +300,7 @@ export const formItems: FormField[] = [
     readonly: false,
     required: true,
     hidden: false,
+    hideLabel: false,
     props: {
       isRange: true,
       format: 'HH:mm:ss',
@@ -317,6 +328,7 @@ export const formItems: FormField[] = [
     readonly: false,
     required: true,
     hidden: false,
+    hideLabel: false,
     props: {
       max: 5,
       allowHalf: false
@@ -337,6 +349,7 @@ export const formItems: FormField[] = [
     readonly: false,
     required: true,
     hidden: false,
+    hideLabel: false,
     props: {
       min: 0,
       max: 100,
@@ -360,6 +373,7 @@ export const formItems: FormField[] = [
     readonly: false,
     required: true,
     hidden: false,
+    hideLabel: false,
     props: {
       size: 10,
       limit: 3,
@@ -381,6 +395,7 @@ export const formItems: FormField[] = [
     readonly: false,
     required: true,
     hidden: false,
+    hideLabel: false,
     props: {
       showAlpha: false,
       colorFormat: undefined,
@@ -405,6 +420,7 @@ export const formItems: FormField[] = [
     readonly: false,
     required: true,
     hidden: false,
+    hideLabel: false,
     props: {
       filterable: false,
       targetOrder: 'original',
@@ -413,8 +429,8 @@ export const formItems: FormField[] = [
       buttonTexts: [],
       dataType: 'static',
       options: [
-        { label: '选项1', value: 1, disabled: false },
-        { label: '选项2', value: 2, disabled: false }
+        { label: '选项1', value: 1, type: 'number', disabled: false },
+        { label: '选项2', value: 2, type: 'number', disabled: false }
       ],
       dataSource: undefined
     },

@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import type { Ref } from 'vue'
-import { type FormField, JsonRender } from '@xfc/vue3-form-render'
+import { type FormField } from '@xfc/vue3-form-render'
+import { Render } from '@/components/FormParser/context'
 
 const { activeData } = inject<{
   activeData: Ref<FormField | undefined>
@@ -79,7 +80,7 @@ const changeRenderKey = () => {
 
 <template>
   <el-form-item prop="value" label="默认值" v-if="activeData?.value !== undefined">
-    <JsonRender
+    <Render
       v-model="activeData.value"
       :field="{
         ...activeData,

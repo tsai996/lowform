@@ -37,21 +37,25 @@ const formula: FormField = {
           {
             label: '病假',
             value: 1,
+            type: 'number',
             disabled: false
           },
           {
             label: '事假',
             value: 2,
+            type: 'number',
             disabled: false
           },
           {
             label: '年假',
-            value: '3',
+            value: 3,
+            type: 'number',
             disabled: false
           },
           {
             label: '丧假',
-            value: '4',
+            value: 4,
+            type: 'number',
             disabled: false
           }
         ]

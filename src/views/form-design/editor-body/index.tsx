@@ -3,7 +3,8 @@ import Draggable from '@xfc/vue3-draggable'
 import { CopyDocument, Delete, Rank } from '@element-plus/icons-vue'
 import './index.scss'
 import { cloneDeep } from 'lodash-es'
-import { type FormField, JsonRender } from '@xfc/vue3-form-render'
+import { type FormField } from '@xfc/vue3-form-render'
+import { Render } from '@/components/FormParser/context'
 
 export default defineComponent({
   props: {
@@ -73,8 +74,13 @@ export default defineComponent({
               event.stopPropagation()
             }}
           >
-            <el-form-item label={field.label} required={field.required} class="field-wrapper">
-              <JsonRender
+            <el-form-item
+              label={field.hideLabel ? undefined : field.label}
+              labelWidth={field.hideLabel ? '0px' : undefined}
+              required={field.required}
+              class="field-wrapper"
+            >
+              <Render
                 key={field.props.key}
                 field={field}
                 modelValue={field.value}
@@ -84,7 +90,7 @@ export default defineComponent({
                 }}
               >
                 {child}
-              </JsonRender>
+              </Render>
             </el-form-item>
             {active ? renderTool(context) : null}
           </div>
@@ -105,7 +111,7 @@ export default defineComponent({
             }}
           >
             <div class="field-wrapper">
-              <JsonRender
+              <Render
                 key={field.props.key}
                 field={field}
                 modelValue={field.value}
@@ -114,7 +120,7 @@ export default defineComponent({
                 }}
               >
                 {child}
-              </JsonRender>
+              </Render>
             </div>
             {active ? renderTool(context) : null}
           </div>
@@ -221,7 +227,7 @@ export default defineComponent({
     const renderInner = (field: FormField) => {
       return field.children?.map((el: FormField) => {
         return (
-          <JsonRender
+          <Render
             key={el.props.key}
             field={el}
             modelValue={el.value}
@@ -230,7 +236,7 @@ export default defineComponent({
             {{
               default: () => renderChildren(el)
             }}
-          </JsonRender>
+          </Render>
         )
       })
     }
