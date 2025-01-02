@@ -136,6 +136,16 @@ const importLocalFile = () => {
 const toGitHub = () => {
   window.open('https://github.com/tsai996/lowform-design')
 }
+const loadData = (data: FormField) => {
+  formConf.value = data
+}
+const getData = () => {
+  return formConf.value
+}
+defineExpose({
+  loadData,
+  getData
+})
 </script>
 
 <template>
