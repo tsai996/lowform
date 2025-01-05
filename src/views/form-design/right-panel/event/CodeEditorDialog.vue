@@ -36,7 +36,7 @@ defineExpose({
 
 <template>
   <el-dialog
-    title="事件处理"
+    :title="`${eventName} -事件处理`"
     v-model="dialogVisible"
     @close="onClose"
     align-center
