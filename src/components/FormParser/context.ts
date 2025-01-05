@@ -5,10 +5,14 @@ import { useUpload } from './hooks/useUpload'
 import { useTransfer } from './hooks/useTransfer'
 import { useButton } from './hooks/useButton'
 import { useDivider } from './hooks/useDivider'
-import { useFormRender, useRender } from '@xfc/vue3-form-render'
+import { useFormRender } from '@xfc/vue3-form-render'
+import http from '@/axios'
 
-useRender()
-const { Render, FormRender, addComponent, removeComponent, components, hooks } = useFormRender()
+const { Render, FormRender, addComponent, removeComponent, components, hooks } = useFormRender({
+  injects: {
+    http: http
+  }
+})
 export { Render, FormRender, addComponent, removeComponent, components, hooks }
 addComponent('Form', ElForm)
 addComponent('Input', ElInput)

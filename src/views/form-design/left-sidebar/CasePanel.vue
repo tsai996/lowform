@@ -5,6 +5,7 @@ import case3 from './case/case3'
 import formula from './case/formula'
 import submit from './case/submit'
 import validate from './case/validate'
+import news from './case/news'
 import type { FormField } from '@xfc/vue3-form-render'
 import type { Ref } from 'vue'
 
@@ -39,6 +40,11 @@ const config = ref([
         label: '请假',
         description: '通过请假日期范围动态计算出请假时长',
         data: formula
+      },
+      {
+        label: '动态数据联动',
+        description: '通过http请求获取动态数据，并通过事件代码与其他组件进行联动',
+        data: news
       },
       {
         label: '动态状态',

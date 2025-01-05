@@ -21,6 +21,7 @@
     "@vueuse/core": "^11.0.3",
     "@xfc/vue3-draggable": "^1.0.5",
     "@xfc/vue3-form-render": "^1.2.4",
+    "axios": "^1.7.9",
     "codemirror": "^6.0.1",
     "element-plus": "^2.9.0",
     "file-saver": "^2.0.5",
@@ -44,6 +45,7 @@
     "@vue/tsconfig": "^0.5.1",
     "eslint": "^8.57.0",
     "eslint-plugin-vue": "^9.23.0",
+    "mockjs": "^1.1.0",
     "npm-run-all2": "^6.2.0",
     "pinia-plugin-persistedstate": "^4.0.1",
     "prettier": "^3.2.5",
@@ -53,6 +55,7 @@
     "unplugin-auto-import": "^0.18.3",
     "unplugin-vue-components": "^0.27.4",
     "vite": "^5.3.1",
+    "vite-plugin-mock": "^2.9.6",
     "vite-plugin-vue-devtools": "^7.3.1",
     "vite-plugin-vue-setup-extend": "^0.4.0",
     "vue-tsc": "^2.0.21"

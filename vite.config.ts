@@ -7,6 +7,7 @@ import vueDevTools from 'vite-plugin-vue-devtools'
 import vueSetupExtend from 'vite-plugin-vue-setup-extend'
 import Components from 'unplugin-vue-components/vite'
 import AutoImport from 'unplugin-auto-import/vite'
+import {viteMockServe} from "vite-plugin-mock";
 import Unocss from 'unocss/vite'
 import { ElementPlusResolver } from 'unplugin-vue-components/resolvers'
 
@@ -18,6 +19,12 @@ export default defineConfig({
     vueJsx(),
     vueDevTools(),
     vueSetupExtend(),
+    viteMockServe({
+      mockPath: './src/mock',
+      localEnabled: true,
+      prodEnabled: true,
+      injectCode: ` import { setupProdMockServer } from './mockProdServer'; setupProdMockServer(); `,
+    }),
     Unocss({
       configFile: './uno.config.ts'
     }),
