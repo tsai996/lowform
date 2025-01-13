@@ -1,3 +1,5 @@
+<p align="center"><img height="200px" src="docs/public/logo.png"></p>
+
 <div align="center">
     <h1>lowform-design</h1>
     <p>低代码表单设计器</p>
