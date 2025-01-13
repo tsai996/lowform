@@ -8,13 +8,17 @@
 lowform-design是一个基于`Vue3`，`Vite`，`TypeScript`，`Element-Plus`等技术栈开发的，适用于低代码或无代码开发平台的表单设计器。
 让普通人也能通过简单配置快速搭建表单。 <br />
 
+## 文档
+
+[官方文档](https://tsai996.github.io/lowform/)
+
 ## 在线预览
 
-https://tsai996.github.io/lowform-design/
+[在线预览](https://tsai996.github.io/lowform-design/)
 
 #### 成品案例
 
-https://demo.lowflow.vip/
+[成品案例](https://demo.lowflow.vip/)
 
 #### 项目源码
 
