@@ -10,24 +10,9 @@
 lowform是一个基于`Vue3`，`Vite`，`TypeScript`，`Element-Plus`等技术栈开发的，适用于低代码或无代码开发平台的表单设计器。
 让普通人也能通过简单配置快速搭建表单。 <br />
 
-## 文档
-
-[官方文档](https://tsai996.github.io/lowform/)
-
-## 在线预览
-
-[在线预览](https://tsai996.github.io/lowform-design/)
-
-#### 成品案例
-
-[成品案例](https://demo.lowflow.vip/)
-
-#### 项目源码
-
-|        | 表单设计器                              |
-|--------|------------------------------------|
-| github | https://github.com/tsai996/lowform |
-| 码云     | https://gitee.com/cai_xiao_feng/lowform |
+- [文档](https://tsai996.github.io/lowform/)
+- [在线预览](https://tsai996.github.io/lowform-design/)
+- [成品案例](https://demo.lowflow.vip/)
 
 #### 示例图
 
@@ -35,6 +20,14 @@ lowform是一个基于`Vue3`，`Vite`，`TypeScript`，`Element-Plus`等技术�
     <img alt="表单设计" src="packages/lowform-design/public/form.png" style="display: inline-block"/>
     <img alt="表单预览" src="packages/lowform-design/public/preview.png" style="display: inline-block"/>
 </p>
+
+#### 项目源码
+
+|        | 源码地址                                    |
+|--------|-----------------------------------------|
+| github | https://github.com/tsai996/lowform      |
+| 码云     | https://gitee.com/cai_xiao_feng/lowform |
+
 
 ## 特性
 
@@ -64,90 +57,6 @@ lowform是一个基于`Vue3`，`Vite`，`TypeScript`，`Element-Plus`等技术�
 | 提示    | ✅  |
 | 分割线   | ✅  |
 
-##  表单解析渲染
-下载依赖
-```shell
-npm install @xfc/vue3-form-render
-```
-注册表单解析
-```typescript
-import { useFormRender } from '@xfc/vue3-form-render'
-
-const { Render, FormRender, addComponent, removeComponent, components, hooks } = useFormRender()
-export { Render, FormRender }
-```
-二次封装添加 el-form-item 父元素，以支持element plus表单
-```html
-<script setup lang="ts">
-  import { FormRender } from './context'
-  
-  const formRef = ref<FormInstance>()
-  const buildRule = (field: FormField) => {
-    const { props, rules } = field
-    let ruleList: FormItemRule[] = []
-    if (Array.isArray(rules)) {
-      ruleList.push(
-        ...rules.map((rule) => {
-          return {
-            pattern: rule.pattern && new RegExp(rule.pattern),
-            message: `请输入正确的${rule.message}`
-          }
-        })
-      )
-    }
-    if (field.required !== undefined) {
-      const required: FormItemRule = {
-        required: field.required || false,
-        message: props.placeholder
-      }
-      if (Array.isArray(field.value)) {
-        required.type = 'array'
-        required.message = `请至少选择一个${field.label}`
-        required.trigger = 'change'
-      }
-      required.message === undefined && (required.message = `${field.label}不能为空`)
-      ruleList.push(required)
-    }
-    return ruleList
-  }
-</script>
-
-<template>
-  <FormRender ref="formRef" :model="formData" :formData="formData" :field="field" v-bind="$attrs">
-    <template #formItem="{ node, field }">
-      <el-form-item
-        v-if="!field.hidden"
-        :prop="field.id"
-        :label="field.hideLabel ? undefined : field.label"
-        :label-width="field.hideLabel ? '0px' : undefined"
-        :required="field.required"
-        :rules="buildRule(field)"
-      >
-        <component :is="node"></component>
-      </el-form-item>
-    </template>
-  </FormRender>
-</template>
-```
-解析表单
-```html
-<script setup lang="ts">
-  import FormParser from '@/components/FormParser/index.vue'
-
-  const field = ref<FormField>({...})
-  const formData = ref<Recordable>({})
-  const formParserRef = ref<InstanceType<typeof FormParser>>()
-</script>
-
-<template>
-  <FormParser
-    ref="formParserRef"
-    :formData="formData"
-    :field="field"
-  >
-  </FormParser>
-</template>
-```
 ## 添加微信好友拉入群聊（备注：加群）
 <p>
     <img alt="微信" src="packages/lowform-design/public/wx.jpg" width="240" height="400" style="display: inline-block"/>
