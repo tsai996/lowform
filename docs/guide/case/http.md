@@ -37,5 +37,5 @@ http.request({
 * 当请求成功后，`field.props.options` 会被更新，组件将根据新的选项列表重新渲染。
 
 ## 4. 完整示例：
-请前往 [在线预览](https://tsai996.github.io/lowform-design/) ，案例/组件联动/动态数据联动，查看完整案例。
+请前往 [在线预览](https://tsai996.github.io/lowform-pages/) ，案例/组件联动/动态数据联动，查看完整案例。
 ![http-case.png](../../public/http-case.png)

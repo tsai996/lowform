@@ -20,5 +20,5 @@ if(value == 2){
 3. **条件判断**：如果组件A的值为 `2`（代表“事假”），则将组件B（请假原因）的 `required` 属性设置为 `true`，否则设置为 `false`。
 
 ## 3. 完整案例
-请前往 [在线预览](https://tsai996.github.io/lowform-design/) ，案例/组件联动/请假，查看完整案例。
+请前往 [在线预览](https://tsai996.github.io/lowform-pages/) ，案例/组件联动/请假，查看完整案例。
 ![qj.png](../../public/qj.png)

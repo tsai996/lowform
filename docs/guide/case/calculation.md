@@ -29,5 +29,5 @@ const timestamp = new Date(value[1]).getTime() - new Date(value[0]).getTime()
 formData.field_ykkfx = timestamp /1000/60/60/24
 ```
 ## 3. 完整示例
-请前往 [在线预览](https://tsai996.github.io/lowform-design/) ，案例/组件联动/请假，查看完整案例。
+请前往 [在线预览](https://tsai996.github.io/lowform-pages/) ，案例/组件联动/请假，查看完整案例。
 ![qj-cal.jpg](../../public/qj-cal.jpg)
