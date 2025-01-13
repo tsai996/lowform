@@ -136,10 +136,10 @@ const importLocalFile = () => {
   }
 }
 const toGitHub = () => {
-  window.open('https://github.com/tsai996/lowform-design')
+  window.open('https://github.com/tsai996/lowform')
 }
 const toDoc = () => {
-  window.open('https://tsai996.github.io/lowform-doc')
+  window.open('https://tsai996.github.io/lowform')
 }
 </script>
 
