@@ -63,7 +63,7 @@ jobs:
         uses: peaceiris/actions-gh-pages@v4
         with:
           personal_token: ${{ secrets.PERSONAL_TOKEN }}
-          external_repository: tsai996/lowform-design
+          external_repository: tsai996/lowform-pages
           publish_branch: main
           publish_dir: ./packages/lowform-design/dist
 
