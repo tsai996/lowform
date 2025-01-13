@@ -13,7 +13,7 @@ import { ElementPlusResolver } from 'unplugin-vue-components/resolvers'
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  base: '/lowform-design',
+  base: '/lowform-pages',
   plugins: [
     vue(),
     vueJsx(),
