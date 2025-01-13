@@ -14,7 +14,7 @@ export default defineConfig({
         nav: [
             {text: "文档", link: "/guide/introduction"},
             {text: '更新日志', link: '/update-log', activeMatch: "/update-log"},
-            {text: '在线预览', link: 'https://tsai996.github.io/lowform-design'},
+            {text: '在线预览', link: 'https://tsai996.github.io/lowform-pages'},
             {text: '关于', link: '/about', activeMatch: "/about"},
         ],
         footer: {
@@ -43,7 +43,7 @@ export default defineConfig({
         },
 
         socialLinks: [
-            {icon: 'github', link: 'https://gitee.com/cai_xiao_feng/lowform-design'}
+            {icon: 'github', link: 'https://gitee.com/cai_xiao_feng/lowform'}
         ],
         search: {
             provider: 'local'
