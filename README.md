@@ -11,7 +11,7 @@ lowform是一个基于`Vue3`，`Vite`，`TypeScript`，`Element-Plus`等技术�
 让普通人也能通过简单配置快速搭建表单。 <br />
 
 - [文档](https://tsai996.github.io/lowform/)
-- [在线预览](https://tsai996.github.io/lowflow-pages/)
+- [在线预览](https://tsai996.github.io/lowform-pages/)
 - [成品案例](https://demo.lowflow.vip/)
 
 #### 示例图
