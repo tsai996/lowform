@@ -53,9 +53,12 @@ const changeReadonly = (val: boolean) => {
             @update:model-value="onUpdateLabel"
           >
             <template #suffix>
-              <el-tooltip content="显示/隐藏标签" placement="top">
+              <el-tooltip
+                content="显示/隐藏标签"
+                placement="top"
+                v-if="activeData.hideLabel !== undefined"
+              >
                 <el-icon
-                  v-if="activeData.hideLabel !== undefined"
                   @click.stop="activeData.hideLabel = !activeData.hideLabel"
                   class="el-input__icon el-input__password"
                 >

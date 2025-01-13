@@ -82,7 +82,11 @@ const positionX = computed(() => {
         >
           <li
             @click="activeSidebar = item"
-            :class="['sidebar-item', { 'is-active': activeSidebar?.name === item.name }]"
+            :class="[
+              'sidebar-item',
+              `${item.name}-item`,
+              { 'is-active': activeSidebar?.name === item.name }
+            ]"
           >
             <slot name="item" :item="item">
               <Iconify :icon="item.icon" width="1.5em" height="1.5em" />

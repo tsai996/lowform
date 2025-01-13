@@ -3,7 +3,7 @@
 <template>
   <div class="top-toolbar">
     <div class="design-logo">
-      <img src="@/assets/logo.svg" alt="logo" />
+      <img src="@/assets/logo.png" alt="logo" />
       <el-text tag="b" class="design-title"> lowform-design </el-text>
     </div>
     <div>

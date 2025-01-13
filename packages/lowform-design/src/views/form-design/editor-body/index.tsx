@@ -50,8 +50,7 @@ export default defineComponent({
               options={{
                 group: 'componentsGroup',
                 handle: '.pointer-move',
-                animation: 340,
-                clone: false
+                animation: 340
               }}
               onAdd={(element) => (activeData.value = element)}
               class="drawing-board p5px"
@@ -76,8 +75,8 @@ export default defineComponent({
           >
             <el-form-item
               label={field.hideLabel ? undefined : field.label}
-              labelWidth={field.hideLabel ? '0px' : undefined}
               required={field.required}
+              labelWidth={field.hideLabel ? '0px' : undefined}
               class="field-wrapper"
             >
               <Render

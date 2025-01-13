@@ -30,8 +30,8 @@ const formConf = ref<FormField>({
     disabled: false
   },
   on: {
-    onVnodeMounted: '',
-    onVnodeUpdated: '',
+    onMounted: '',
+    onUnmounted: '',
     onValidate: ''
   },
   children: []
@@ -52,9 +52,10 @@ const onRedo = () => {
 const globalStore = useGlobalStore()
 const { isDark } = storeToRefs(globalStore)
 const codeDrawerRef = ref<InstanceType<typeof CodeDrawer>>()
-const rormParserRef = ref<InstanceType<typeof FormParser>>()
+const formParserRef = ref<InstanceType<typeof FormParser>>()
 const previewConf = ref<FormField>(formConf.value)
 const previewForm = ref<Recordable>({})
+const readonly = ref(false)
 const previewKey = ref(0)
 const sidebarSize = ref(50)
 const mode = ref('pc')
@@ -100,16 +101,17 @@ const onCode = () => {
 const onPreview = () => {
   previewConf.value = cloneDeep(formConf.value)
   previewForm.value = {}
+  readonly.value = false
   previewKey.value = Date.now()
   drawerVisible.value = true
 }
 const submitForm = () => {
-  rormParserRef.value?.submitForm().then((formData) => {
+  formParserRef.value?.submitForm().then((formData: Recordable) => {
     ElMessage.info(JSON.stringify(formData, null, 0))
   })
 }
 const resetForm = () => {
-  rormParserRef.value?.resetForm()
+  formParserRef.value?.resetForm()
 }
 const onClose = () => {
   previewForm.value = {}
@@ -136,16 +138,9 @@ const importLocalFile = () => {
 const toGitHub = () => {
   window.open('https://github.com/tsai996/lowform-design')
 }
-const loadData = (data: FormField) => {
-  formConf.value = data
+const toDoc = () => {
+  window.open('https://tsai996.github.io/lowform-doc')
 }
-const getData = () => {
-  return formConf.value
-}
-defineExpose({
-  loadData,
-  getData
-})
 </script>
 
 <template>
@@ -160,10 +155,16 @@ defineExpose({
             @change="globalStore.switchMode()"
             v-model="isDark"
           />
-          <el-button @click="toGitHub">
-            <Iconify class="el-icon--left" icon="ri:github-fill" :size="4" />
-            GitHub
-          </el-button>
+          <el-button-group>
+            <el-button @click="toGitHub">
+              <Iconify class="el-icon--left" icon="ri:github-fill" :size="4" />
+              GitHub
+            </el-button>
+            <el-button @click="toDoc">
+              <Iconify class="el-icon--left" icon="ep:document" :size="4" />
+              文档
+            </el-button>
+          </el-button-group>
         </el-space>
       </TopArea>
     </el-header>
@@ -235,13 +236,17 @@ defineExpose({
     <CodeDrawer ref="codeDrawerRef" :field="formConf" />
     <el-drawer v-model="drawerVisible" @close="onClose" title="表单预览" size="95%" direction="btt">
       <FormParser
-        ref="rormParserRef"
+        ref="formParserRef"
         :key="previewKey"
         :formData="previewForm"
         :field="previewConf"
+        :readonly="readonly"
       >
       </FormParser>
       <template #footer>
+        <el-button type="primary" @click="readonly = !readonly">
+          {{ readonly ? '编辑模式' : '只读模式' }}
+        </el-button>
         <el-button type="primary" @click="submitForm">提交</el-button>
         <el-button type="info" @click="resetForm">重置</el-button>
         <el-button @click="drawerVisible = false">关闭</el-button>

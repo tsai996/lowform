@@ -1,6 +1,5 @@
-// 表单项
 import type { FormField } from '@xfc/vue3-form-render'
-
+// 表单项
 export const formItems: FormField[] = [
   {
     id: 'field01',
@@ -546,7 +545,7 @@ export const containers: FormField[] = [
         id: 'field18_2',
         name: 'Col',
         label: '分栏2',
-        icon: 'ic:baseline-view-column',
+        icon: 'carbon:grid',
         type: 'container',
         value: undefined,
         hidden: false,

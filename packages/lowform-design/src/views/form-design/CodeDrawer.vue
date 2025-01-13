@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import CodemirrorEditor from '@/components/CodemirrorEditor/index.vue'
-import { typescriptLanguage } from '@codemirror/lang-javascript'
+import { htmlLanguage } from '@codemirror/lang-html'
 import type { FormField } from '@xfc/vue3-form-render'
 import FileSaver from 'file-saver'
 
@@ -9,7 +9,7 @@ const props = defineProps<{
 }>()
 const drawerVisible = ref(false)
 const codeTemplate = ref(``)
-const extensions = ref([typescriptLanguage])
+const extensions = ref([htmlLanguage])
 const open = () => {
   codeTemplate.value = `<template>
   <FormParser
@@ -24,7 +24,6 @@ const open = () => {
       </el-form-item>
     </template>
   </FormParser>
-
 </template>
 <script setup>
   import { ref } from 'vue'

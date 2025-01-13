@@ -1,7 +1,7 @@
 <script setup lang="ts">
-import { type FormField } from '@xfc/vue3-form-render'
-import { FormRender } from './context'
 import type { FormInstance, FormItemRule } from 'element-plus'
+import { FormRender } from './context'
+import type { FormField } from '@xfc/vue3-form-render'
 
 const props = defineProps<{
   field: FormField
