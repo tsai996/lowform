@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import Draggable from '@xfc/vue3-draggable'
-import { containers, formItems } from '../config'
+import { containers, formItems } from './fieldConfig'
 import { cloneDeep } from 'lodash-es'
 import type { Ref } from 'vue'
 import type { FormField } from '@xfc/vue3-form-render'
