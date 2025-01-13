@@ -1,13 +1,13 @@
 <p align="center"><img height="200px" src="docs/public/logo.png"></p>
 
 <div align="center">
-    <h1>lowform-design</h1>
+    <h1>lowform</h1>
     <p>低代码表单设计器</p>
 </div>
 
 ## 介绍
 
-lowform-design是一个基于`Vue3`，`Vite`，`TypeScript`，`Element-Plus`等技术栈开发的，适用于低代码或无代码开发平台的表单设计器。
+lowform是一个基于`Vue3`，`Vite`，`TypeScript`，`Element-Plus`等技术栈开发的，适用于低代码或无代码开发平台的表单设计器。
 让普通人也能通过简单配置快速搭建表单。 <br />
 
 ## 文档
@@ -24,10 +24,10 @@ lowform-design是一个基于`Vue3`，`Vite`，`TypeScript`，`Element-Plus`等�
 
 #### 项目源码
 
-|        | 表单设计器                                          |
-|--------|------------------------------------------------|
-| github | https://github.com/tsai996/lowform-design      |
-| 码云     | https://gitee.com/cai_xiao_feng/lowform-design |
+|        | 表单设计器                              |
+|--------|------------------------------------|
+| github | https://github.com/tsai996/lowform |
+| 码云     | https://gitee.com/cai_xiao_feng/lowform |
 
 #### 示例图
 
